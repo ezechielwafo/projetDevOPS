@@ -1,0 +1,11 @@
+stages:
+  - test
+
+test-runner:
+  stage: test
+  tags:
+    - docker
+  image: alpine:latest
+  script:
+    - echo "Le runner Docker a pris le job"
+    - cat /etc/os-release
